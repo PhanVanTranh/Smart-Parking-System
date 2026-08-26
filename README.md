@@ -106,30 +106,31 @@ flowchart TB
 ---
 
 ## Cấu trúc thư mục
+```text
 Smart-Parking-System/
 ├── Smart-Parking-Systerm/
-│ ├── Python/
-│ │ ├── CameraWebServer1703newupdate/
-│ │ │ └── CameraWebServer1703newupdate.ino # Firmware ESP32-CAM (stream video)
-│ │ └── code python real 1.py # App AI: OCR biển số + tính tiền + Flask webhook
-│ │
-│ ├── Web_Dashboard/
-│ │ ├── database.py # Flask server: sổ sách, lịch sử, điều khiển thủ công
-│ │ └── templates/
-│ │ └── index.html # Giao diện dashboard
-│ │
-│ ├── app_thu_tien/ # Ứng dụng Android (Java + Gradle)
-│ │ └── app/src/main/java/com/phuoc/smartparking/
-│ │ └── MainActivity.java # Hiển thị QR thanh toán VietQR
-│ │
-│ ├── esp32_node1/
-│ │ └── esp32_node1.ino # Barie ra, loa MP3, cảm biến lửa
-│ │
-│ └── esp32_node2/
-│ └── esp32_node2.ino # Barie vào, LCD, cảm biến slot/IR/ánh sáng, còi
+│   ├── Python/
+│   │   ├── CameraWebServer1703newupdate/
+│   │   │   └── CameraWebServer1703newupdate.ino # Firmware ESP32-CAM (stream video)
+│   │   └── code python real 1.py # App AI: OCR biển số + tính tiền + Flask webhook
+│   │
+│   ├── Web_Dashboard/
+│   │   ├── database.py # Flask server: sổ sách, lịch sử, điều khiển thủ công
+│   │   ├── templates/
+│   │   │   └── index.html # Giao diện dashboard
+│   │
+│   ├── app_thu_tien/ # Ứng dụng Android (Java + Gradle)
+│   │   └── app/src/main/java/com/phuoc/smartparking/
+│   │       └── MainActivity.java # Hiển thị QR thanh toán VietQR
+│   │
+│   ├── esp32_node1/
+│   │   └── esp32_node1.ino # Barie ra, loa MP3, cảm biến lửa
+│   │
+│   └── esp32_node2/
+│       └── esp32_node2.ino # Barie vào, LCD, cảm biến slot/IR/ánh sáng, còi
 │
 └── video_demo.mp4 # Video demo hệ thống hoạt động
-
+```
 ---
 
 ## Công nghệ sử dụng
@@ -161,40 +162,40 @@ Smart-Parking-System/
 ---
 
 ## Sơ đồ dữ liệu Firebase Realtime Database
+```text
 ParkingSystem/
 ├── CurrentVehicle/
-│ ├── license_plate # Biển số xe đang xử lý thanh toán
-│ ├── status # 0: nghỉ | 2: chờ thanh toán | 3: đã thanh toán
-│ ├── amount # Số tiền cần thanh toán (VNĐ)
-│ ├── date_in / date_out
+│   ├── license_plate # Biển số xe đang xử lý thanh toán
+│   ├── status # 0: nghỉ | 2: chờ thanh toán | 3: đã thanh toán
+│   ├── amount # Số tiền cần thanh toán (VNĐ)
+│   ├── date_in / date_out
 │
 ├── GateControl/
-│ ├── action # Lệnh điều khiển chung (đọc bởi AI app)
-│ ├── EntryGate/
-│ │ ├── plate # Biển số vừa nhận diện ở cổng vào
-│ │ ├── servo # "open" | "close" (điều khiển thủ công)
-│ │ └── time_in
-│ └── ExitGate/
-│ ├── plate
-│ ├── servo
-│ └── time_out
+│   ├── action # Lệnh điều khiển chung (đọc bởi AI app)
+│   ├── EntryGate/
+│   │   ├── plate # Biển số vừa nhận diện ở cổng vào
+│   │   ├── servo # "open" | "close" (điều khiển thủ công)
+│   │   └── time_in
+│   └── ExitGate/
+│       ├── plate
+│       ├── servo
+│       └── time_out
 │
 ├── Sensors/
-│ ├── Slots/
-│ │ ├── slot1 … slot4 # true/false: có xe hay trống
-│ └── Environment/
-│ ├── fire1, fire2 # Trạng thái cảm biến lửa
-│ ├── flame_alert # Cờ báo cháy toàn hệ thống
-│ └── lux # Cường độ ánh sáng (lux)
+│   ├── Slots/
+│   │   ├── slot1 … slot4 # true/false: có xe hay trống
+│   └── Environment/
+│       ├── fire1, fire2 # Trạng thái cảm biến lửa
+│       ├── flame_alert # Cờ báo cháy toàn hệ thống
+│       └── lux # Cường độ ánh sáng (lux)
 │
 └── History/
-└── {bienso}/
-├── license_plate
-├── time_in / date_in
-├── time_out / date_out
-└── total_amount
-
----
+    └── {bienso}/
+        ├── license_plate
+        ├── time_in / date_in
+        ├── time_out / date_out
+        └── total_amount
+```
 
 ## Luồng hoạt động
 
