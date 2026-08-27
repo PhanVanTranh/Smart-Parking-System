@@ -6,8 +6,8 @@
 // ─── 1. THÔNG SỐ KẾT NỐI ─────────────────────────────────────────────
 #define WIFI_SSID     "YOUR_WIFI_SSID"
 #define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
-#define FIREBASE_HOST "smartparkingsystem-1e749-default-rtdb.asia-southeast1.firebasedatabase.app"
-#define FIREBASE_AUTH "ZR9iivMINUuuCCxkGYQBjEOdNLaNaNinNalrO1vN"
+#define FIREBASE_HOST "Your_Firebase_Host"
+#define FIREBASE_AUTH "Your_Firebase_Auth"
 
 // ─── 2. ĐƯỜNG DẪN FIREBASE ───────────────────────────────────────────
 #define PATH_ENTRY_PLATE   "/ParkingSystem/GateControl/EntryGate/plate"

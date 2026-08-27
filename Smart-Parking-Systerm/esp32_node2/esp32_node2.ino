@@ -8,8 +8,8 @@
 // --- 1. CẤU HÌNH ---
 const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
-#define FIREBASE_HOST "smartparkingsystem-1e749-default-rtdb.asia-southeast1.firebasedatabase.app"
-#define FIREBASE_AUTH "ZR9iivMINUuuCCxkGYQBjEOdNLaNaNinNalrO1vN"
+#define FIREBASE_HOST "Your_Firebase_Host"
+#define FIREBASE_AUTH "Your_Firebase_Auth"
 
 
 // PINOUT
