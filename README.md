@@ -89,7 +89,7 @@ flowchart TB
 
 -  **Nhận diện biển số xe tự động (ALPR)** bằng EasyOCR, có cơ chế:
   - Làm mượt hình ảnh (CLAHE, bilateral filter)
-  - Ép sửa lỗi ký tự dễ nhầm (số ⇄ chữ: `0↔D`, `1↔T`, `8↔B`...)
+  - Ép sửa lỗi ký tự dễ nhầm (số -> chữ: `0->D`, `1->T`, `8->B`...)
   - Xác nhận biển số liên tiếp (streak ≥ 5 lần khớp) để tránh đọc sai
   - Ghi nhớ các biển số đã biết để tự sửa lỗi lệch 1 ký tự
 - **Điều khiển Barie tự động** cho cả cổng vào và cổng ra qua Servo
@@ -150,7 +150,7 @@ Smart-Parking-System/
 - `esp_camera.h` — ESP32-CAM streaming
 
 **Cloud:**
-- Firebase Realtime Database (khu vực `asia-southeast1`)
+- Firebase Realtime Database
 
 **Mobile:**
 - Android (Java), Firebase Realtime Database SDK, Glide (tải ảnh QR)
