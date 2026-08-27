@@ -2,7 +2,7 @@
 
 Hệ thống bãi đỗ xe thông minh tự động hoá toàn bộ quy trình **vào – gửi xe – thanh toán – ra bãi**, kết hợp giữa phần cứng IoT (ESP32), nhận diện biển số bằng AI (OCR), thanh toán chuyển khoản QR tự động, và giám sát/điều khiển qua Firebase Realtime Database.
 
-Video demo hoạt động thực tế: [`video_demo.mp4`](./video_demo.mp4)
+Video demo hoạt động thực tế: [`smart-parking-system.mp4`](https://youtu.be/SgE9geUWcJk)
 
 ---
 
