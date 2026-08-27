@@ -6,10 +6,11 @@
 #include <FirebaseESP32.h>
 
 // --- 1. CẤU HÌNH ---
+const char* ssid = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 #define FIREBASE_HOST "smartparkingsystem-1e749-default-rtdb.asia-southeast1.firebasedatabase.app"
 #define FIREBASE_AUTH "ZR9iivMINUuuCCxkGYQBjEOdNLaNaNinNalrO1vN"
-const char* ssid = "Duybucu";
-const char* password = "01234567899";
+
 
 // PINOUT
 #define IR_GATE_IN 15
