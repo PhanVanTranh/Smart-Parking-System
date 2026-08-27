@@ -108,12 +108,12 @@ flowchart TB
 ```text
 Smart-Parking-System/
 ├── Smart-Parking-Systerm/
-   ├── Python/
-   │   ├── CameraWebServer1703newupdate/
-   │   │   └── CameraWebServer1703newupdate.ino # Firmware ESP32-CAM (stream video)
+   ├── ai_camera_system/
+   │   ├── esp32cam_stream/
+   │   │   └── esp32cam_stream.ino # Firmware ESP32-CAM (stream video)
    │   └── ai_camera_server.py # App AI: OCR biển số + tính tiền + Flask webhook
    │
-   ├── Web_Dashboard/
+   ├── web_dashboard/
    │   ├── database.py # Flask server: sổ sách, lịch sử, điều khiển thủ công
    │   ├── templates/
    │   │   └── index.html # Giao diện dashboard
