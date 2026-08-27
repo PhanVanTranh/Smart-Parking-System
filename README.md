@@ -118,7 +118,7 @@ Smart-Parking-System/
    │   ├── templates/
    │   │   └── index.html # Giao diện dashboard
    │
-   ├── app_thu_tien/ # Ứng dụng Android (Java + Gradle)
+   ├── android_payment_app/ # Ứng dụng Android (Java + Gradle)
    │   └── app/src/main/java/com/phuoc/smartparking/
    │       └── MainActivity.java # Hiển thị QR thanh toán VietQR
    │
