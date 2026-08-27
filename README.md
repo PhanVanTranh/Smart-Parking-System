@@ -17,8 +17,7 @@ Video demo hoạt động thực tế: [`smart-parking-system.mp4`](https://yout
 - [Luồng hoạt động](#-luồng-hoạt-động)
 - [Phần cứng & Sơ đồ chân](#-phần-cứng--sơ-đồ-chân)
 - [Hướng dẫn cài đặt](#-hướng-dẫn-cài-đặt)
-- [Lưu ý bảo mật](#-lưu-ý-bảo-mật)
-- [Tác giả](#-tác-giả)
+
 
 ---
 
@@ -109,27 +108,26 @@ flowchart TB
 ```text
 Smart-Parking-System/
 ├── Smart-Parking-Systerm/
-│   ├── Python/
-│   │   ├── CameraWebServer1703newupdate/
-│   │   │   └── CameraWebServer1703newupdate.ino # Firmware ESP32-CAM (stream video)
-│   │   └── code python real 1.py # App AI: OCR biển số + tính tiền + Flask webhook
-│   │
-│   ├── Web_Dashboard/
-│   │   ├── database.py # Flask server: sổ sách, lịch sử, điều khiển thủ công
-│   │   ├── templates/
-│   │   │   └── index.html # Giao diện dashboard
-│   │
-│   ├── app_thu_tien/ # Ứng dụng Android (Java + Gradle)
-│   │   └── app/src/main/java/com/phuoc/smartparking/
-│   │       └── MainActivity.java # Hiển thị QR thanh toán VietQR
-│   │
-│   ├── esp32_node1/
-│   │   └── esp32_node1.ino # Barie ra, loa MP3, cảm biến lửa
-│   │
-│   └── esp32_node2/
-│       └── esp32_node2.ino # Barie vào, LCD, cảm biến slot/IR/ánh sáng, còi
-│
-└── video_demo.mp4 # Video demo hệ thống hoạt động
+   ├── Python/
+   │   ├── CameraWebServer1703newupdate/
+   │   │   └── CameraWebServer1703newupdate.ino # Firmware ESP32-CAM (stream video)
+   │   └── ai_camera_server.py # App AI: OCR biển số + tính tiền + Flask webhook
+   │
+   ├── Web_Dashboard/
+   │   ├── database.py # Flask server: sổ sách, lịch sử, điều khiển thủ công
+   │   ├── templates/
+   │   │   └── index.html # Giao diện dashboard
+   │
+   ├── app_thu_tien/ # Ứng dụng Android (Java + Gradle)
+   │   └── app/src/main/java/com/phuoc/smartparking/
+   │       └── MainActivity.java # Hiển thị QR thanh toán VietQR
+   │
+   ├── esp32_node1/
+   │   └── esp32_node1.ino # Barie ra, loa MP3, cảm biến lửa
+   │
+   └── esp32_node2/
+       └── esp32_node2.ino # Barie vào, LCD, cảm biến slot/IR/ánh sáng, còi
+
 ```
 ---
 
@@ -263,7 +261,7 @@ pip install opencv-python easyocr pillow firebase-admin flask requests numpy
 - Cập nhật các biến `URL_CAM_VAO`, `URL_CAM_RA`, `WEB_SERVER_IN`, `WEB_SERVER_OUT` theo IP thực tế của ESP32-CAM và Web Dashboard.
 - Chạy:
 ```bash
-python "code python real 1.py"
+python "ai_camera_server.py"
 ```
 
 ### 3. Chạy Web Dashboard
@@ -279,5 +277,4 @@ Truy cập `http://localhost:5000` để xem sổ sách, lịch sử, xuất Exc
 - Đảm bảo có file `google-services.json` hợp lệ (Firebase) trong `app/`.
 - Cập nhật thông tin ngân hàng nhận tiền trong `MainActivity.java` (`BANK_ID`, `ACCOUNT_NO`, `ACCOUNT_NAME`).
 - Build & chạy trên thiết bị/máy ảo (minSdk 21, targetSdk 36).
-
 ---
