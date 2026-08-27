@@ -4,8 +4,8 @@
 #include <ESP32Servo.h>
 
 // ─── 1. THÔNG SỐ KẾT NỐI ─────────────────────────────────────────────
-#define WIFI_SSID     "OTOHOANHAO"
-#define WIFI_PASSWORD "123123123"
+#define WIFI_SSID     "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
 #define FIREBASE_HOST "smartparkingsystem-1e749-default-rtdb.asia-southeast1.firebasedatabase.app"
 #define FIREBASE_AUTH "ZR9iivMINUuuCCxkGYQBjEOdNLaNaNinNalrO1vN"
 
