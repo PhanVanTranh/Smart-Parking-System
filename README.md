@@ -1,3 +1,9 @@
+<div align="center">
+  
+![Repo Traffic](https://komarev.com/ghpvc/?username=smart-parking-system&label=Repo+Traffic&color=orange&style=flat-square)
+
+</div>
+
 # Smart Parking System — Hệ thống bãi đỗ xe thông minh
 
 Hệ thống bãi đỗ xe thông minh tự động hoá toàn bộ quy trình **vào – gửi xe – thanh toán – ra bãi**, kết hợp giữa phần cứng IoT (ESP32), nhận diện biển số bằng AI (OCR), thanh toán chuyển khoản QR tự động, và giám sát/điều khiển qua Firebase Realtime Database.
